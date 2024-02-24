@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+</style>
+</head>
+<body>
+<div class="">
+  <h1>Cart <span id="valueincress">0</span></h1>
+  <button onclick="ChangesValu()">Click Button</button>
+</div>
+
+
+
+<script>
+function ChangesValu(){
+ let span = document.getElementById("valueincress");
+ let current = parseInt(span.textContent)
+ 
+ if(span.textContent < 10){
+	span.textContent = current + 1
+ }
+ else{
+	span.textContent = current - 10
+ }
+ 
+}
+</script>
+</body>
+</html>

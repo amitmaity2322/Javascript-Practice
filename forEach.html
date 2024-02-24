@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+<div id="demo"></div>
+ <script>
+
+const ArryNew =["JavaScript", "Angular", "React", "python"]
+
+for(let i = 0; i < ArryNew.length; i++ ){
+ document.getElementById("demo").innerHTML += ArryNew[i];
+}
+
+ArryNew.forEach(function(val, index){
+    console.log(val, index);
+    document.getElementById("demo").innerHTML += val
+});
+
+
+    
+    </script>
+</body>
+</html>

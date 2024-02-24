@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+	.box{
+		width: 400px;
+		height: 400px;
+		background-color: #ccc;
+		margin-top: 50px;
+		margin-left: 20px;
+		padding: 20px;
+	}
+	li{
+		list-style-type: none;
+		display: flex;
+		margin-top: 10px
+	}
+	.remo {
+    padding: 2px 5px;
+    background-color: #f00;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.bar {
+	position: absolute;
+	width:3px;
+	left: 50%;
+	top: -20px;
+	height: 100%;
+	z-index: 0;
+	transform: translateX(-50%);
+	background: #414141;
+}
+	
+	.bar-inner {
+	position: absolute;
+	width:3px !important;
+	left: 50%;
+	top: -30px;
+	z-index: 1 !important;
+	transform: translateX(-50%);
+	background: #00CCFF;
+}
+	
+</style>
+
+</head>
+<body>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="box">
+	<div class="itemn">Item - <span id="item"></span></div>
+	<div id="hello"></div>
+</div>
+<div class="border">
+<div class="bar-inner"></div>
+</div>
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<div class="fisrt">Mobile-<button onclick="add('Mobile')">Click Now</button></div>
+<div class="fisrt">Ipad-<button onclick="add('Ipad')">Click Now</button></div>
+<div class="fisrt">Desktop-<button onclick="add('Desktop')">Click Now</button></div>
+
+<script src="custom-new.js"></script>
+<script type="text/javascript">
+
+
+function add(val){
+	document.getElementById("hello").innerHTML += ""val;
+}
+
+	
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+(function($){
+	
+	$(function(){
+		$('.border').append('<div class="bar"></div>');
+
+		$(window).scroll(function() {
+			
+      	var $myDiv = $('.bar-inner');
+				
+//         var st = $(this).scrollTop();   
+				var st = $(this).scrollTop();
+			
+			   var st = $(this).scrollTop();
+				 var wh = $(document).height();
+
+			// st : wh = X : 100
+			// x = (st*100)/wh
+
+			var perc = (st*100)/wh;
+			console.log(st);
+        $myDiv.height( st - 1100);
+        if( st == 0 || st > 6000) {
+            $myDiv.hide();
+        } else {
+            $myDiv.show();
+        }
+    }).scroll();
+		
+// 		$(window).on("scroll touchmove", function() {
+
+// 		if ($(document).scrollTop() >= $(".border").position().top) {
+// 			$(".border").addClass('active');
+			
+// 			var height =  $(".border").data('height');
+// 			height = height = height + 10;
+// 			var currentHeight = height > 100 ? 100 : height;
+// 			$(".border").data('height', currentHeight);
+			
+// 			$(".border:before").css('height', currentHeight + '%');
+// 			console.log('Current Height' + currentHeight);
+// 			console.log('Actual height ' + $(".border").position().top);
+// 		}
+
+// 		});
+		
+		
+	});
+	
+})(jQuery)
+
+
+</script>
+</body>
+</html>

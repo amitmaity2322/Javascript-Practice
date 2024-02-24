@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+    .form{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="demo"></div>
+
+<script>
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+const SecondMember = {
+    firstName: "Amit",
+  lastName: "Maity",
+}
+let dd = person.fullName.bind(SecondMember);
+
+document.getElementById("demo").innerHTML = dd();
+
+</script>
+</body>
+</html>

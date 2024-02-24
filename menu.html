@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+<style>
+    
+body{
+    margin: 0px;
+    padding:0px;
+}
+ul, li{
+ margin: 0px;
+ padding: 0px;
+}
+.navcl ul li {
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px;
+}
+nav.navcl {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+}
+.logo {
+    font-size: 20px;
+    margin: 20px;
+}
+.line {
+    width: 34px;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 5px;
+    display: none;
+}
+.nav_area{
+    display: block;
+}
+@media only screen and (max-width:767px){
+    .line {
+        display: block;
+    }
+    nav.navcl {
+    justify-content: space-between;
+    margin: 0 10px;
+    position: relative;
+}
+
+.dot {
+    margin-top: 20px;
+}
+.nav_area {
+    
+    background-color: #ccc;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    width: 70%;
+    margin-right: -10px;
+   
+}
+#mobileN{
+    display: none;
+    transition: display 0.5s ease-in-out;
+}
+
+.close {
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    /* width: 10px; */
+    /* height: 10px; */
+    border-radius: 50px;
+    padding: 16px 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+    
+}
+</style>
+</head>
+<body>
+
+<nav class="navcl">
+    <div class="logo">Logo</div>
+    <div class="dot" onclick="mobilemenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <ul class="nav_area" id="mobileN">
+        <div class="close" onclick="closeMenu()">close</div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+    
+</nav>
+<script>
+   
+function mobilemenu(){
+    var mobileNav = document.getElementById("mobileN");
+    if(mobileNav !== "none"){
+        mobileNav.style.display = "block";
+        console.log("Show mobile menu");
+    }
+    
+}
+function closeMenu(){
+    let mobilehi = document.getElementById("mobileN");
+    if(mobilehi !== "block"){
+        mobilehi.style.display = "none";
+        console.log("Hide mobile menu");
+    }
+   
+}
+</script>
+</body>
+</html>
